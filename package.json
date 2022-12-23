@@ -1,0 +1,38 @@
+{
+  "name": "node-template",
+  "version": "1.0.0",
+  "description": "Startup template for node.js projects",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon",
+    "lint": "eslint src/ --ext .js",
+    "lint:fix": "eslint --fix",
+    "lint:staged": "lint-staged",
+    "post:install": "husky install && husky add .husky/pre-commit 'npm run lint:staged'"
+  },
+  "keywords": [
+    "node",
+    "template"
+  ],
+  "author": "Antonio José Masiá <email@antoniomasia.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.1"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write",
+      "eslint --quiet"
+    ]
+  }
+}
