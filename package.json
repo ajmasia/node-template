@@ -30,7 +30,7 @@
     "prettier": "^2.8.1"
   },
   "lint-staged": {
-    "src/**/*.ts": [
+    "src/**/*.js": [
       "prettier --write",
       "eslint --quiet"
     ]
